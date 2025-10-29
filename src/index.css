@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@keyframes gradient-slow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-slow {
+    background-size: 200% 200%;
+    animation: gradient-slow 30s ease infinite;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* ✅ Allow scrolling but hide scrollbar */
+body {
+    overflow: auto;
+    /* or overflow-y: scroll; */
+}
