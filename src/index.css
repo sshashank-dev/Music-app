@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* 
 @keyframes gradient-slow {
     0% {
         background-position: 0% 50%;
@@ -12,12 +13,43 @@
     100% {
         background-position: 0% 50%;
     }
+} */
+@keyframes galaxyMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.galaxy-bg {
+    background: radial-gradient(circle at 30% 30%, #2d00f7, transparent 40%),
+        radial-gradient(circle at 70% 70%, #ff00c8, transparent 40%),
+        radial-gradient(circle at 50% 20%, #00fff0, transparent 40%),
+        #000;
+    background-blend-mode: screen;
+    background-size: 300% 300%;
+    animation: galaxyMove 25s ease-in-out infinite;
+}
+
+
+
+/* .aurora-bg {
+    background: linear-gradient(-45deg, #240046, #5a189a, #9d4edd, #3c096c);
+    background-size: 400% 400%;
+    animation: auroraMove 15s ease infinite;
 }
 
 .animate-gradient-slow {
     background-size: 200% 200%;
     animation: gradient-slow 30s ease infinite;
-}
+} */
 
 /* Hide scrollbar for Chrome, Safari, and Edge */
 ::-webkit-scrollbar {

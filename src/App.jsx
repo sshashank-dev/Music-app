@@ -4,6 +4,11 @@ import Header from "./components/Header";
 import MainPlayer from "./components/MainPlayer";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import "./index.css";
+
+
+import Particles from "react-tsparticles";
+
 
 // 🎵 Songs array (make sure files are inside /public/music/)
 const songs = [
@@ -124,12 +129,17 @@ export default function App() {
   }, [togglePlay, playNext, playPrev, volume, changeVolume]);
 
   return (
+
     <div
-      className="flex flex-col min-h-screen text-white transition-all duration-700 relative overflow-hidden"
-      style={{
-        background: `linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.95)), url(${currentSong.cover}) center/cover no-repeat`,
-      }}
+      className="galaxy-bg flex flex-col min-h-screen text-white transition-all duration-700 relative overflow-hidden"
     >
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-lg"></div>
+
+
+
+
+
+
       {/* Overlay for blur effect */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-lg"></div>
 
@@ -138,6 +148,11 @@ export default function App() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col min-h-screen">
+
+
+
+
+
         {/* Header */}
         <Header />
 
